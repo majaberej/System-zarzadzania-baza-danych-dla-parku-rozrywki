@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Error 504</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon_package_v0.16/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/img/favicon_package_v0.16/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}"/>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f7bec7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 10%;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            top: 40%;
+        }
+
+        .errorImage {
+            height: 152px;
+            width: 374px;
+        }
+
+        .text {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-size: 28px;
+            font-family: Century Gothic, sans-serif;
+            color: #33010f;
+        }
+
+        .btn-primary {
+            background-color: #b07b7f;
+            border-color: #b07b7f;
+            font-size: 18px;
+            font-family: Century Gothic, sans-serif;
+            transition: width 0.3s ease, transform 0.3s ease;
+            transform-origin: top;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            font-size: 19px;
+            background-color: #b07b7f;
+            border-color: #b07b7f;
+        }
+
+        .btn-primary:active, .btn-primary:focus {
+            background-color: #b07b7f !important;
+            border-color: #b07b7f !important;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="errorImage">
+        <img src="../img/504.gif" alt="Description of the image">
+    </div>
+
+    <div class="text">
+        <p>Przekroczenie limitu czasu serwera</p>
+    </div>
+
+    <form method="post" th:action="@{/index}">
+        <div class="form-group">
+            <button class="btn btn-primary" type="button" onclick="goBack()">Powrót</button>
+        </div>
+    </form>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

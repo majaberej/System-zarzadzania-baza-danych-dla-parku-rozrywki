@@ -1,0 +1,109 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #fbf7f4 !important;
+    height: 100px;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-size: 22px;
+    font-family: Century Gothic, sans-serif;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 24px;
+}
+
+.navbar-brand img {
+    margin-left: 0px !important;
+    max-width: 190px;
+    height: auto;
+    display: block;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px !important;
+}
+
+.backgroundContainer {
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: url("../img/tlo.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-container {
+     height: 40%;
+     width: 35%;
+     border-radius: 10px;
+     text-align: center;
+     margin: auto;
+     position: absolute;
+     top: 0;
+     bottom: 15%;
+     left: 0;
+     left: 5%;
+     background-color: #fbf7f4;
+     border: 1px solid #ced4da;
+ }
+
+.form-group {
+    margin-top: 20px;
+    margin-left: 60px;
+    width: 60%;
+    font-family: Century Gothic, sans-serif;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+        font-size: 18px;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid #ced4da;
+}
+
+.btn-primary {
+    background-color: #c79fa2;
+    border-color: #c79fa2;
+    margin-left: 50%;
+    margin-top: 25px;
+    font-family: Century Gothic, sans-serif;
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c79fa2;
+    border-color: #c79fa2;
+    font-size: 19px;
+    transform: scale(1.05);
+}
+
+.btn-primary:active, .btn-primary:focus {
+    background-color: #c79fa2 !important;
+    border-color: #c79fa2 !important;
+    outline: none;
+]}
+
+.error-message {
+    color: #c7786f;
+    position: absolute;
+    bottom: 15%;
+    left: 40px;
+    font-family: Century Gothic, sans-serif;
+}
+
+.swal2-title {
+   font-family: Century Gothic, sans-serif;
+}

@@ -1,0 +1,131 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #fbf7f4 !important;
+    height: 100px;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-size: 22px;
+    font-family: Century Gothic, sans-serif;
+     transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 24px;
+}
+
+.navbar-brand img {
+    margin-left: 0px !important;
+    max-width: 190px;
+    height: auto;
+    display: block;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px !important;
+}
+
+.rounded-button {
+    border-radius: 10px;
+}
+
+.navbar-nav .login-button {
+    margin-right: 5px !important;
+    border-radius: 10px;
+    width: 140px;
+    background-color: #c79fa2;
+    color: #fff;
+    font-size: 21px;
+    font-family: Century Gothic, sans-serif;
+    text-align: center;
+ transition: width 0.3s ease, transform 0.3s ease;
+ }
+
+.navbar-nav .login-button:hover {
+       font-size: 22px;
+       transform: scale(1.1);
+}
+
+.navbar-nav {
+    justify-content: flex-end;
+}
+
+.backgroundContainer {
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: url("../img/tlo.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contactBox {
+    border: 1px solid #ced4da;
+    background-color: #FBF7F4;
+    height: 65%;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 37%;
+}
+
+.contactBox label {
+    margin-top: 10px;
+    font-size: 34px;
+    font-family: Garamond, serif
+}
+
+.contactBox section  {
+    margin-top: 0px;
+}
+
+.contactAndAddress h1 {
+    font-size: 22px;
+    font-family: Century Gothic, sans-serif;
+}
+
+.contactAndAddress p {
+    font-size: 18px;
+    font-family: Century Gothic, sans-serif;
+}
+
+.contactBox button {
+     background-color: #fbf7f4;
+     border: none;
+     transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+.contactBox button:hover {
+      font-size: 20px;
+}
+
+.mapBox {
+    border: 1px solid #ced4da;
+    background-color: transparent;
+    height: 65%;
+    width: 30%;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 37%;
+    right: 0;
+    overflow: hidden;
+}
+
+.swal2-title {
+   font-family: Century Gothic, sans-serif;
+}

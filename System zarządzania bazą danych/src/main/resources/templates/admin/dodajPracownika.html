@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Dodaj pracownika</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon_package_v0.16/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/img/favicon_package_v0.16/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/img/favicon_package_v0.16/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="/css/adminStyles/dodajPracownikaAdminStyles.css"/>
+
+</head>
+<body>
+
+<div class="backgroundContainer">
+  <div class="contentBox">
+    <label>
+      Dodaj pracownika
+    </label>
+    <form action="#" th:action="@{/admin/dodajPracownika}" th:object="${employee}" method="post">
+      <table cellpadding="10">
+<!--        <tr>-->
+<!--        <td>ID pracownika:</td>-->
+<!--        <td><input placeholder="Podaj ID pracownika" type="text" th:field="*{id}" required></td>-->
+<!--        </tr>-->
+        <tr>
+          <td>Imię:</td>
+          <td><input placeholder="Podaj imię pracownika" type="text" th:field="*{name}" required></td>
+        </tr>
+        <tr>
+          <td>Nazwisko:</td>
+          <td><input placeholder="Podaj nazwisko pracownika" type="text" th:field="*{surname}" required></td>
+        </tr>
+        <tr>
+          <td>Płeć:</td>
+          <td>
+            <select class="types" th:field="*{gender}" required>
+              <option value=""  selected hidden>Wybierz płeć</option>
+              <option value="K">Kobieta</option>
+              <option value="M">Mężczyzna</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>PESEL:</td>
+          <td><input placeholder="Podaj PESEL pracownika" type="text" th:field="*{pesel}" required></td>
+        </tr>
+        <tr>
+          <td>Stanowisko:</td>
+          <td>
+            <select class="types" th:field="*{position}" required>
+              <option value=""  selected hidden>Wybierz stanowisko</option>
+              <option value="Konserwator">Konserwator</option>
+              <option value="Obsluga atrakcji">Obsługa atrakcji</option>
+            </select>
+          </td>
+        </tr>
+
+      </table>
+      <div class="buttons">
+        <a th:href="@{/admin/pracownicy}">
+          <button id="Anuluj" type="button">Anuluj</button>
+        </a>
+        <button id="Dodaj" type="submit">Dodaj</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

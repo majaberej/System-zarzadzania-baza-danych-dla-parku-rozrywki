@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html   xmlns = "http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edytuj konserwację</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon_package_v0.16/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/img/favicon_package_v0.16/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/img/favicon_package_v0.16/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="/css/userStyles/dodajKonserwacjeUserStyles.css"/>
+
+</head>
+<body>
+
+<div class="backgroundContainer">
+  <div class="contentBox">
+    <label>
+      Edytuj konserwację
+    </label>
+    <form action="#" th:action="@{/user/edytujKonserwacje}" th:object="${maintenanceAttraction}" method="post">
+      <table cellpadding="10">
+        <tr>
+          <td>ID konserwacji:</td>
+          <td><input id="idInput" type="text" th:field="*{id}" required></td>
+        </tr>
+        <tr>
+          <td>Data:</td>
+          <td><input id="dateInput" type="date" th:field="*{date}" required></td>
+        </tr>
+
+        <tr>
+          <td>ID atrakcji</td>
+          <td><input id="attractionInput" type="text" th:field="*{attraction.id}" required></td>
+        </tr>
+
+        <tr>
+          <td>ID pracowników:</td>
+          <td><input id="employeesInput" type="text" th:field="*{employees}" required></td>
+        </tr>
+
+
+      </table>
+      <div class="buttons">
+        <a th:href="@{/user/konserwacje}">
+          <button id="Anuluj" type="button">Anuluj</button>
+        </a>
+        <button id="Dodaj" type="submit">Zapisz</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #ced6df;
+    margin: 0;
+    padding: 0;
+}
+
+.contentBox label {
+    text-align: center;
+    font-size: 34px;
+    height: 34px;
+    font-family: Garamond, serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.backgroundContainer {
+    height: 100vh;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #ced6df;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentBox {
+    border: 1px solid #b5babf;
+    background-color: #b1cbdf;
+    height: 60vh;
+    width: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+table {
+    width: 90vh;
+    border-collapse: collapse;
+    background-color: #fbf7f4;
+    margin: 0 auto;
+    height: calc(60vh - 124px);
+    font-size: 16px;
+    font-family: Century Gothic, sans-serif;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+table input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    font-family: Century Gothic, sans-serif;
+}
+
+.types {
+    width: 85%;
+    padding: 8px;
+    font-size: 16px;
+    font-family: Century Gothic, sans-serif;
+}
+
+.types select {
+    width: 100%;
+}
+
+.buttons {
+    width: 90vh;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.buttons button {
+    height: 50px;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #c79fa2;
+    border: 1px solid #c79fa2;
+    color: #fff;
+    cursor: pointer;
+    font-family: Century Gothic, sans-serif;
+    font-size: 22px;
+    transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+     font-size: 22px;
+     transform: scale(1.1);
+ }

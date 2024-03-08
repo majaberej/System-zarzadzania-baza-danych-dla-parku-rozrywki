@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Energiolandia - Kontakt</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon_package_v0.16/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/img/favicon_package_v0.16/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="css/kontaktStyles.css" />
+    <script src="js/kontaktScript.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="img/logo.png" alt="Energiolandia Logo"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/index}">Strona główna</a></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/o_nas}">O nas</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link login-button rounded-button" th:href="@{/login}">Zaloguj się</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="backgroundContainer">
+        <div class="contactBox">
+            <label>Dane kontaktowe</label>
+            <div class="contactAndAddress">
+                <section>
+                    <h1>Adres</h1>
+                    <p>ul. Szkolna 17 <br>
+                       15-640 Białystok</p>
+                </section>
+
+                <section>
+                    <h1>Numer telefonu</h1>
+                    <p><button id="copyNumberButton" onclick="copyNumber()">623 786 124</button></p>
+                </section>
+
+                <section>
+                    <h1>Adres email</h1>
+                    <p><button id="copyEmailButton" onclick="copyEmail()">kontakt@energiolandia.pl</button></p>
+                </section>
+
+                <section>
+                    <h1>Godziny otwarcia</h1>
+                    <p>10:00 - 20:00, ndz. - czw. <br>
+                       10:00 - 22:00, pt. - sb.</p>
+                </section>
+            </div>
+        </div>
+        <div class="mapBox">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.2642477148793!2d23.08394527623208!3d53.12340189138202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ffb77bfb8d15b%3A0xc43e2f02eebb7ca7!2sSzkolna%2017%2C%2015-640%20Bia%C5%82ystok!5e0!3m2!1spl!2spl!4v1704201292735!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+    </div>
+</body>
+</html>
